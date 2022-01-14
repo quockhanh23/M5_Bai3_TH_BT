@@ -13,42 +13,38 @@ export class CaluComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  add() {
+  number1(): any {
     // @ts-ignore
     let a = +document.getElementById('number1').value;
+    return a
+  }
+
+  number2(): any {
     // @ts-ignore
     let b = +document.getElementById('number2').value;
-    let res = a + b
+    return b
+  }
+
+  add(): any {
+    let res = this.number1() + this.number2();
     // @ts-ignore
     document.getElementById('res').innerHTML = res
   }
 
   minus(): any {
-    // @ts-ignore
-    let a = +document.getElementById('number1').value;
-    // @ts-ignore
-    let b = +document.getElementById('number2').value;
-    let res = a - b
+    let res = this.number1() - this.number2();
     // @ts-ignore
     document.getElementById('res').innerHTML = res
   }
 
   multiplication(): any {
-    // @ts-ignore
-    let a = +document.getElementById('number1').value;
-    // @ts-ignore
-    let b = +document.getElementById('number2').value;
-    let res = a * b
+    let res = this.number1() * this.number2();
     // @ts-ignore
     document.getElementById('res').innerHTML = res
   }
 
   division() {
-    // @ts-ignore
-    let a = +document.getElementById('number1').value;
-    // @ts-ignore
-    let b = +document.getElementById('number2').value;
-    let res = a / b
+    let res = this.number1() / this.number2();
     // @ts-ignore
     document.getElementById('res').innerHTML = res
   }
