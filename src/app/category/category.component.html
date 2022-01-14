@@ -1,0 +1,29 @@
+<p>category works!</p>
+<button class="btn btn-primary">Alo2</button>
+<h2>{{category.name}}</h2>
+<input type="number" [(ngModel)]="category.age">
+<h2 *ngIf="category.age < 19">Dưới 18 tuổi</h2>
+<h2 *ngIf="category.age < 19">Không đủ tuổi rồi</h2>
+<h2 *ngIf="category.age < 10">Đi chỗ khác chơi đê</h2>
+<h2 *ngIf="category.age >= 19">Trên 18 tuổi</h2>
+<h2 *ngIf="category.age >= 23">Già rồi</h2>
+<div>
+  <select class="form-select" style="width: 100px">
+    <option *ngFor="let team of category.team">{{team}}</option>
+  </select>
+</div>
+<div>
+  <ul>
+    <li>{{category.team2.sas}}</li>
+    <li>{{category.team2.gign}}</li>
+    <li>{{category.team2.fbi}}</li>
+  </ul>
+</div>
+<!--<div>-->
+<!--  <select>-->
+<!--    <option *ngFor="let team2 of category.team2.fbi">{{team2}}</option>-->
+<!--    <option *ngFor="let team2 of category.team2.gign">{{team2}}</option>-->
+<!--    <option *ngFor="let team2 of category.team2.sas">{{team2}}</option>-->
+<!--  </select>-->
+<!--</div>-->
+
