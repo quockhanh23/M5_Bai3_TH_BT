@@ -7,13 +7,17 @@ import {ProductComponent} from './product/product.component';
 import {FormsModule} from "@angular/forms";
 import {CategoryComponent} from './category/category.component';
 import { CaluComponent } from './calu/calu.component';
+import { ColorComponent } from './color/color.component';
+import { Color2Component } from './color2/color2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     CategoryComponent,
-    CaluComponent
+    CaluComponent,
+    ColorComponent,
+    Color2Component
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,7 @@ import { CaluComponent } from './calu/calu.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
 }
 
 export interface Category {

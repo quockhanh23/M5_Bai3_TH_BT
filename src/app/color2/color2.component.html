@@ -1,0 +1,22 @@
+<p>color2 works!</p>
+<div class="row">
+  <div class="col-2">
+     <label>color 1:</label><br>
+     <label>color 2:</label><br>
+     <label>color 3:</label>
+  </div>
+  <div class="col-10">
+    <div>
+      <input type="range" min="1" max="255" [(ngModel)]="color1">
+    </div>
+    <div>
+      <input type="range" min="1" max="255" [(ngModel)]="color2">
+    </div>
+
+    <div>
+      <input type="range" min="1" max="255" [(ngModel)]="color3">
+    </div>
+
+  </div>
+</div>
+<div [style.background]="'rgb('+color1+','+color2+','+color3+')'" style="height: 100px"></div>

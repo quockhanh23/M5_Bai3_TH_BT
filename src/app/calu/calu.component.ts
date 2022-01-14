@@ -48,6 +48,16 @@ export class CaluComponent implements OnInit {
     // @ts-ignore
     document.getElementById('res').innerHTML = res
   }
+
+  change() {
+    // @ts-ignore
+  document.getElementById('nhập1').style.background = "#6066d5";
+  }
+  change1() {
+    // @ts-ignore
+    document.getElementById('nhập1').style.background = "#0f9d1f";
+  }
 }
+
 
 
