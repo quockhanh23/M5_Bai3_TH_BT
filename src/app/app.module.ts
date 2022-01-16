@@ -14,6 +14,7 @@ import {LikeComponent} from './like/like.component';
 import {BirthdayComponent} from './birthday/birthday.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {CommonService} from "./service/common.service";
+import {TimelinesComponent} from "./timelines/timelines.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {CommonService} from "./service/common.service";
     LikeComponent,
     BirthdayComponent,
     NotfoundComponent,
+    TimelinesComponent
   ],
   imports: [
     BrowserModule,
