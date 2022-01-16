@@ -1,14 +1,25 @@
 <p>calu works!</p>
 <div id="nhập1">
-  <button (click)="change()">Đổi màu 1</button>
-  <button (click)="change1()">Đổi màu 2</button>
- <br>
-<input type="number" id="number1">
-<input type="number" id="number2">
-<button class="btn-primary btn" (click)="add()">Cộng</button>
-<button class="btn-primary btn" (click)="minus()">Trừ</button>
-<button class="btn-primary btn" (click)="multiplication()">Nhân</button>
-<button class="btn-primary btn" (click)="division()">Chia</button>
-<h2 id="res"></h2>
+  <button class="btn bg-info" (click)="change()">Đổi màu 1</button>
+  <button class="btn bg-info" (click)="change1()">Đổi màu 2</button>
+  <div class="row" style="margin-top: 5px">
+    <div class="col-3">
+      <p><strong>Number 1: </strong></p>
+      <p><strong>Number 2: </strong></p>
+    </div>
+    <div class="col-8">
+      <input type="text" size="26" id="number1"><br>
+      <input type="text" size="26" id="number2"><br>
+      <div style="margin-top: 5px">
+        <button class="button" (click)="add()">Cộng</button>
+        <button class="button" (click)="minus()">Trừ</button>
+        <button class="button" (click)="multiplication()">Nhân</button>
+        <button class="button" (click)="division()">Chia</button>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <strong>Kết quả: </strong><strong style="color: chartreuse;" id="res"></strong>
 </div>
 

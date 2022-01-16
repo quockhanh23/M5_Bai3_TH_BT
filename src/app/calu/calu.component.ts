@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 
+
 @Component({
   selector: 'app-calu',
   templateUrl: './calu.component.html',
   styleUrls: ['./calu.component.css']
 })
+
 export class CaluComponent implements OnInit {
 
   constructor() {
@@ -25,37 +27,63 @@ export class CaluComponent implements OnInit {
     return b
   }
 
+  res(): any {
+    // @ts-ignore
+    let res = document.getElementById('res')
+    return res
+  }
+
+  check(): boolean {
+    let check = isNaN(this.number1()) || isNaN(this.number2())
+    return check
+  }
+
   add(): any {
     let res = this.number1() + this.number2();
+    if (this.check())
+      res = "Nhập số vào"
     // @ts-ignore
-    document.getElementById('res').innerHTML = res
+    this.res().innerHTML = res
   }
 
   minus(): any {
-    let res = this.number1() - this.number2();
-    // @ts-ignore
-    document.getElementById('res').innerHTML = res
+    let res = "Nhập số vào"
+    if (this.check())
+      // @ts-ignore
+      this.res().innerHTML = res
+    else
+      // @ts-ignore
+      this.res().innerHTML = this.number1() - this.number2()
   }
 
   multiplication(): any {
-    let res = this.number1() * this.number2();
-    // @ts-ignore
-    document.getElementById('res').innerHTML = res
+    let res = "Nhập số vào"
+    if (this.check())
+      // @ts-ignore
+      this.res().innerHTML = res
+    else
+      // @ts-ignore
+      this.res().innerHTML = this.number1() * this.number2()
   }
 
-  division() {
-    let res = this.number1() / this.number2();
-    // @ts-ignore
-    document.getElementById('res').innerHTML = res
+  division(): any {
+    let res = "Nhập số vào"
+    if (this.check())
+      // @ts-ignore
+      this.res().innerHTML = res
+    else
+      // @ts-ignore
+      this.res().innerHTML = this.number1() / this.number2()
   }
 
   change() {
     // @ts-ignore
-  document.getElementById('nhập1').style.background = "#6066d5";
+    document.getElementById('nhập1').style.background = "#1ee02f";
   }
+
   change1() {
     // @ts-ignore
-    document.getElementById('nhập1').style.background = "#0f9d1f";
+    document.getElementById('nhập1').style.background = "#9d0f75";
   }
 }
 
