@@ -14,6 +14,7 @@ export class Color2Component implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('ngOnInit')
   }
 
 }

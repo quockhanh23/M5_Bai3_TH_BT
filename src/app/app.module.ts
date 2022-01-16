@@ -12,6 +12,8 @@ import {Color2Component} from './color2/color2.component';
 import {ArticleComponent} from './article/article.component';
 import {LikeComponent} from './like/like.component';
 import {BirthdayComponent} from './birthday/birthday.component';
+import {NotfoundComponent} from './notfound/notfound.component';
+import {CommonService} from "./service/common.service";
 
 @NgModule({
   declarations: [
@@ -23,21 +25,22 @@ import {BirthdayComponent} from './birthday/birthday.component';
     Color2Component,
     ArticleComponent,
     LikeComponent,
-    BirthdayComponent
+    BirthdayComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
 }
 
-export interface Alo {
+export interface Product {
   name: string
 }
 
@@ -53,6 +56,7 @@ export interface Team2 {
   gign: string,
   fbi: string,
 }
+
 export interface Team3 {
   cia: string,
   policezei: string,

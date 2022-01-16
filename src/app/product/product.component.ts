@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from "../service/common.service";
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private common: CommonService) { }
 
   ngOnInit(): void {
+
   }
 
 }

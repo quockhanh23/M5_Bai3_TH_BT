@@ -42,35 +42,28 @@ export class CaluComponent implements OnInit {
     let res = this.number1() + this.number2();
     if (this.check())
       res = "Nhập số vào"
-    // @ts-ignore
     this.res().innerHTML = res
   }
 
   minus(): any {
-    let res = "Nhập số vào"
     if (this.check())
-      // @ts-ignore
-      this.res().innerHTML = res
+      this.res().innerHTML = "Nhập số vào"
     else
       // @ts-ignore
       this.res().innerHTML = this.number1() - this.number2()
   }
 
   multiplication(): any {
-    let res = "Nhập số vào"
     if (this.check())
-      // @ts-ignore
-      this.res().innerHTML = res
+      this.res().innerHTML = "Nhập số vào"
     else
       // @ts-ignore
       this.res().innerHTML = this.number1() * this.number2()
   }
 
   division(): any {
-    let res = "Nhập số vào"
     if (this.check())
-      // @ts-ignore
-      this.res().innerHTML = res
+      this.res().innerHTML = "Nhập số vào"
     else
       // @ts-ignore
       this.res().innerHTML = this.number1() / this.number2()

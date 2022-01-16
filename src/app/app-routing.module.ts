@@ -6,13 +6,17 @@ import {CaluComponent} from "./calu/calu.component";
 import {CategoryComponent} from "./category/category.component";
 import {AppComponent} from "./app.component";
 import {ArticleComponent} from "./article/article.component";
+import {NotfoundComponent} from "./notfound/notfound.component";
 
 const routes: Routes = [
+  {path: '', component: CaluComponent},
   {path: 'color2', component: Color2Component},
   {path: 'color', component: ColorComponent},
   {path: 'calu', component: CaluComponent},
   {path: 'category', component: CategoryComponent},
   {path: 'ar', component: ArticleComponent},
+  {path: '**', component: NotfoundComponent},
+
 ];
 
 @NgModule({

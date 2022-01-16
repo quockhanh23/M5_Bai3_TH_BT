@@ -11,6 +11,8 @@
     <input type="number" [(ngModel)]="category.age">
   </div>
 </div>
+<button class="btn btn-success" (click)="changeName()">Đổi tên</button>
+<button class="btn btn-success" (click)="changeAge()">Tăng tuổi</button>
 <h2 *ngIf="category.age > 2 then alo1 else alo2"></h2>
 <ng-template #alo1><h2 *ngIf="category.age > 10 then alo3 else alo4"></h2></ng-template>
 <ng-template #alo3><h2>Lớn hơn 10 tuổi</h2></ng-template>
