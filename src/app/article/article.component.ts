@@ -3,7 +3,7 @@ import {Article} from '../article';
 
 @Component({
   selector: 'app-article',
-  templateUrl:  './article.component.html',
+  templateUrl: './article.component.html',
   styleUrls: ['./article.component.css'],
 
 })
@@ -36,6 +36,20 @@ export class ArticleComponent implements OnInit {
 
   addNewArticle() {
     this.articles.push(this.article);
+  }
+
+  findById(): any {
+    for (let i = 0; i < this.articles.length; i++) {
+      if (this.article === i) {
+        return i
+      }
+      return -1
+    }
+  }
+
+  delete(): any {
+    let index = this.findById()
+    this.articles.splice(index)
   }
 }
 

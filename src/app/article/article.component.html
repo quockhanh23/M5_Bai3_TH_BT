@@ -2,6 +2,7 @@
 
 <div *ngFor="let art of articles">
   <a href="{{art.url}}" target="_blank">{{art.title}}</a>: <app-like></app-like>
+  <button class="btn btn-warning" (click)="delete()">Delete</button>
 </div>
 <hr>
 <div>
@@ -15,11 +16,13 @@
       <td>Url:</td>
       <td>
         <textarea class="bg-info" [(ngModel)]="article.url" cols="70"></textarea>
+
       </td>
     </tr>
     <tr>
       <td></td>
       <td><button class="btn btn-primary" style="float: right" (click)="addNewArticle()">Add</button></td>
+
     </tr>
   </table>
 </div>

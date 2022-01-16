@@ -12,12 +12,11 @@ export class CategoryComponent implements OnInit {
     name: 'khánh',
     age: 0,
     team: ['Seal 6', 'SAS', 'GIGN', 'FBI'],
-    team2: {
-      gign: 'GIGN',
-      fbi: 'FBI',
-      sas: 'SAS'
+    team2: [
+      {gign: 'GIGN',sas : 'SAS', fbi : 'FBI'},
+      {cia: 'CIA', policezei: 'POLICEZEI', swat: 'SWAT'}
+    ]
     }
-  }
 
   constructor() {
   }

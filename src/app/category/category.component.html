@@ -7,7 +7,7 @@
     <p><strong>Nhập Tuổi: </strong></p>
   </div>
   <div class="col-6">
-    <input type="text" [(ngModel)]="category.name">
+    <input type="text" [(ngModel)]="category.name"><br>
     <input type="number" [(ngModel)]="category.age">
   </div>
 </div>
@@ -16,7 +16,7 @@
 <ng-template #alo3><h2>Lớn hơn 10 tuổi</h2></ng-template>
 <ng-template #alo4><h2>Nhỏ hơn 10 tuổi</h2></ng-template>
 <ng-template #alo2><h2 *ngIf="category.age < 5 ">Dưới 5 tuổi</h2></ng-template>
-<hr>
+
 <div class="row">
   <div class="col-6">
     <div>
@@ -27,21 +27,11 @@
   </div>
   <div class="col-6">
     <div>
-      <ul>
-        <li>{{category.team2.sas}}</li>
-        <li>{{category.team2.gign}}</li>
-        <li>{{category.team2.fbi}}</li>
-      </ul>
+      <select class="form-select" style="width: 100px">
+        <option *ngFor="let team2 of category.team2">{{team2}}</option>
+      </select>
     </div>
   </div>
 </div>
-
-
-<!--<div>-->
-<!--  <select>-->
-<!--    <option *ngFor="let team2 of category.team2.fbi">{{team2}}</option>-->
-<!--    <option *ngFor="let team2 of category.team2.gign">{{team2}}</option>-->
-<!--    <option *ngFor="let team2 of category.team2.sas">{{team2}}</option>-->
-<!--  </select>-->
-<!--</div>-->
+<p>{{category.team2}}</p>
 

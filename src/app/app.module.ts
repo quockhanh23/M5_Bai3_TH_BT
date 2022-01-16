@@ -11,7 +11,7 @@ import {ColorComponent} from './color/color.component';
 import {Color2Component} from './color2/color2.component';
 import {ArticleComponent} from './article/article.component';
 import {LikeComponent} from './like/like.component';
-import { BirthdayComponent } from './birthday/birthday.component';
+import {BirthdayComponent} from './birthday/birthday.component';
 
 @NgModule({
   declarations: [
@@ -45,11 +45,16 @@ export interface Category {
   name: string,
   age: number
   team: [string, string, string, string]
-  team2: Team2
+  team2: [Team2, Team3]
 }
 
 export interface Team2 {
   sas: string,
   gign: string,
   fbi: string,
+}
+export interface Team3 {
+  cia: string,
+  policezei: string,
+  swat: string,
 }
