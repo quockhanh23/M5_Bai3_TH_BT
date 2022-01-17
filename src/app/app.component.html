@@ -21,6 +21,7 @@
     <div class="col-1">
       <a class="navbar-brand" routerLink="/pr">Progress bar</a>
     </div>
+    <hr>
   </div>
   <div class="row">
     <div class="col-5"><img width="100%" style="border-radius: 5px"
@@ -30,13 +31,18 @@
       <router-outlet></router-outlet>
       <hr>
       <div class="row">
-        <app-name-card cardName="Professional Dev" email="prodev@codegym.vn" phone="0123456789"></app-name-card>
+        <app-name-card (voteSize)="voteCount($any($event))" cardName="Professional Dev" email="prodev@codegym.vn" phone="0123456789" [age]="1"></app-name-card>
       </div>
-
+      <h1>Total vote from card: {{vote}}</h1>
     </div>
-
+  </div>
+  <div class="row">
+    <h2>Angular Job Board </h2>
+    <app-employee></app-employee>
   </div>
 </div>
+
+
 <!--  <div class="row">-->
 <!--    <div id="div1" class="col-6">-->
 <!--      <app-product></app-product>-->

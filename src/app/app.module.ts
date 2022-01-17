@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ProductComponent} from './product/product.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CategoryComponent} from './category/category.component';
 import {CaluComponent} from './calu/calu.component';
 import {ColorComponent} from './color/color.component';
@@ -17,6 +17,7 @@ import {CommonService} from "./service/common.service";
 import {TimelinesComponent} from "./timelines/timelines.component";
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +33,14 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     NotfoundComponent,
     TimelinesComponent,
     NameCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]

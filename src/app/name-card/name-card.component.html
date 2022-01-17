@@ -7,5 +7,11 @@
     <h3 class="name-card__heading">{{ cardName }}</h3>
     <p class="name-card__text">{{ email }}</p>
     <p class="name-card__text">{{ phone }}</p>
+    <p class="name-card__text">{{ age }}</p>
   </div>
+</div>
+<button class="btn btn-primary" (click)="voted()">Click to vote</button>
+<div>
+  <label>Add an item: <input #newItem></label>
+  <button (click)="addNewItem(newItem.value)">Add to parent's list</button>
 </div>

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-name-card',
@@ -9,9 +9,23 @@ export class NameCardComponent implements OnInit {
   @Input() cardName: string | undefined;
   @Input() email: string | undefined;
   @Input() phone: string | undefined;
-  constructor() { }
+  @Input() age: number | undefined;
+  @Output() voteSize = new EventEmitter<any>();
+  @Output() newItemEvent = new EventEmitter<string>();
+  counter: number = 0;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  voted() {
+    this.counter++;
+    this.voteSize.emit(this.counter);
+  }
+
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
 }
