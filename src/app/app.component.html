@@ -1,21 +1,21 @@
 <div class="container">
   <div class="row">
-    <div class="col-2">
+    <div class="col-1">
       <a class="navbar-brand" routerLink="/category">Category</a>
     </div>
-    <div class="col-2">
+    <div class="col-1">
       <a class="navbar-brand" routerLink="/color2">Color 2</a>
     </div>
-    <div class="col-2">
+    <div class="col-1">
       <a class="navbar-brand" routerLink="/color">Color</a>
     </div>
-    <div class="col-2">
+    <div class="col-1">
       <a class="navbar-brand" routerLink="/calu">Calu</a>
     </div>
-    <div class="col-2">
+    <div class="col-1">
       <a class="navbar-brand" routerLink="/ar">Article</a>
     </div>
-    <div class="col-2">
+    <div class="col-1">
       <a class="navbar-brand" routerLink="/time">Time</a>
     </div>
   </div>
@@ -26,7 +26,14 @@
     <div class="col-7">
       <router-outlet></router-outlet>
       <hr>
+      <div class="row">
+        <app-name-card cardName="Professional Dev" email="prodev@codegym.vn" phone="0123456789"></app-name-card>
+      </div>
+      <div class="row">
+        <app-progress-bar [progress]="5"></app-progress-bar>
+      </div>
     </div>
+
   </div>
 </div>
 <!--  <div class="row">-->

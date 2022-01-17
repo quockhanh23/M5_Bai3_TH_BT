@@ -8,6 +8,7 @@ import {AppComponent} from "./app.component";
 import {ArticleComponent} from "./article/article.component";
 import {NotfoundComponent} from "./notfound/notfound.component";
 import {TimelinesComponent} from "./timelines/timelines.component";
+import {NameCardComponent} from "./name-card/name-card.component";
 
 const routes: Routes = [
   {path: '', component: CaluComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'category', component: CategoryComponent},
   {path: 'ar', component: ArticleComponent},
   {path: 'time', component: TimelinesComponent},
+  {path: 'nameCard', component: NameCardComponent},
   {path: '**', component: NotfoundComponent},
 
 ];
