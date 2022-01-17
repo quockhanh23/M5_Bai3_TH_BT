@@ -10,6 +10,7 @@ import {NotfoundComponent} from "./notfound/notfound.component";
 import {TimelinesComponent} from "./timelines/timelines.component";
 import {NameCardComponent} from "./name-card/name-card.component";
 import {ProgressBarComponent} from "./progress-bar/progress-bar.component";
+import {EmployeeComponent} from "./employee/employee.component";
 
 const routes: Routes = [
   {path: '', component: CaluComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'time', component: TimelinesComponent},
   {path: 'nc', component: NameCardComponent},
   {path: 'pr', component: ProgressBarComponent},
+  {path: 'em', component: EmployeeComponent},
   {path: '**', component: NotfoundComponent},
 
 ];
