@@ -11,6 +11,7 @@ export class ProgressBarComponent implements OnInit {
   @Input() progress = 0;
 
   constructor() {
+    this.loading()
   }
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class ProgressBarComponent implements OnInit {
       if (this.progress == 100) {
         clearInterval(interval);
       }
-    }, 1000);
+    }, 100);
   }
 
 }
