@@ -1,0 +1,18 @@
+<p>product2 works!</p>
+<div *ngFor="let product of listProduct">
+  <h2>
+  <strong>{{product.id}}</strong>
+  <strong>{{product.name}}</strong>
+  <strong>{{product.price}}</strong></h2>
+</div>
+<div>
+  <form [formGroup]="form" (ngSubmit)="add()" style="text-align: center">
+    <label>ID:</label><br>
+    <input type="text" formControlName="id"><br>
+    <label>Name:</label><br>
+    <input type="text" formControlName="name"><br>
+    <label>Price</label><br>
+    <input type="text" formControlName="price"><br>
+    <button class="btn btn-warning" type="submit">Submit Application</button>
+  </form>
+</div>

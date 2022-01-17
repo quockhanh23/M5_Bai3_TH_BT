@@ -18,6 +18,7 @@ import {TimelinesComponent} from "./timelines/timelines.component";
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { Product2Component } from './product2/product2.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { EmployeeComponent } from './employee/employee.component';
     TimelinesComponent,
     NameCardComponent,
     ProgressBarComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    Product2Component
   ],
   imports: [
     BrowserModule,
