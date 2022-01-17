@@ -1,18 +1,31 @@
 <p>product2 works!</p>
-<div *ngFor="let product of listProduct">
-  <h2>
-  <strong>{{product.id}}</strong>
-  <strong>{{product.name}}</strong>
-  <strong>{{product.price}}</strong></h2>
+<div class="row">
+  <div class="col-5">
+    <div>
+      <h2 *ngFor="let product of listProduct">
+        <h3>
+          <strong>{{product.id}},</strong>
+          <strong>{{product.name}},</strong>
+          <strong>{{product.price}}</strong>
+        <button class="btn btn-warning" (click)="delete()">Delete</button></h3>
+      </h2>
+    </div>
+  </div>
+  <div class="col-5">
+    <div>
+      <form [formGroup]="form" (ngSubmit)="add()">
+        <label>ID:</label><br>
+        <input type="text" formControlName="id"><br>
+        <label>Name:</label><br>
+        <input type="text" formControlName="name"><br>
+        <label>Price</label><br>
+        <input type="text" formControlName="price"><br>
+        <button class="btn btn-warning" type="submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
 </div>
-<div>
-  <form [formGroup]="form" (ngSubmit)="add()" style="text-align: center">
-    <label>ID:</label><br>
-    <input type="text" formControlName="id"><br>
-    <label>Name:</label><br>
-    <input type="text" formControlName="name"><br>
-    <label>Price</label><br>
-    <input type="text" formControlName="price"><br>
-    <button class="btn btn-warning" type="submit">Submit Application</button>
-  </form>
-</div>
+
+
+
+

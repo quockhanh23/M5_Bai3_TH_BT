@@ -28,7 +28,7 @@ export class Product2Component implements OnInit {
     id: new FormControl(''),
     name: new FormControl(''),
     price: new FormControl(''),
-    })
+  })
 
   constructor() {
   }
@@ -38,5 +38,20 @@ export class Product2Component implements OnInit {
 
   add(): any {
     this.listProduct.push(this.form.value)
+  }
+
+  findByIndex(): any {
+    for (let i = 0; i < this.listProduct.length; i++) {
+      // @ts-ignore
+      if (this.listProduct === i) {
+        return i
+      }
+      return -1
+    }
+  }
+
+  delete(): any {
+    let index = this.findByIndex()
+    this.listProduct.splice(index)
   }
 }
