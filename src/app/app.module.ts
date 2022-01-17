@@ -41,6 +41,7 @@ import { RattingbarComponent } from './rattingbar/rattingbar.component';
     Product2Component,
     RattingbarComponent,
 
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product2} from "../model/product2";
-import {FormControl, FormGroup} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-product2',
@@ -24,16 +24,18 @@ export class Product2Component implements OnInit {
       name: 'IP3',
       price: '100'
     }]
+
   form = new FormGroup({
-    id: new FormControl(''),
-    name: new FormControl(''),
-    price: new FormControl(''),
+    id: new FormControl('', [Validators.required, Validators.nullValidator]),
+    name: new FormControl('', [Validators.required, Validators.nullValidator]),
+    price: new FormControl('', [Validators.required, Validators.nullValidator]),
   })
 
-  constructor() {
+  constructor(private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
+
   }
 
   add(): any {
@@ -53,5 +55,13 @@ export class Product2Component implements OnInit {
   delete(): any {
     let index = this.findByIndex()
     this.listProduct.splice(index)
+  }
+
+  get form1() {
+    return this.form.controls
+  }
+
+  get form2(): { [key: string]: AbstractControl; } {
+    return this.form.controls;
   }
 }

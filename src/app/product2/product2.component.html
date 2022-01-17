@@ -8,20 +8,30 @@
           <strong>{{product.id}},</strong>
           <strong>{{product.name}},</strong>
           <strong>{{product.price}}</strong>
-        <button class="btn btn-warning" (click)="delete()">Delete</button></h3>
+          <button class="btn btn-warning" (click)="delete()">Delete</button>
+        </h3>
       </h2>
     </div>
   </div>
   <div class="col-5">
     <div>
-      <form [formGroup]="form" (ngSubmit)="add()">
-        <label>ID:</label><br>
-        <input type="text" formControlName="id"><br>
-        <label>Name:</label><br>
+      <form [formGroup]="form" (ngSubmit)="add()" novalidate>
+        <label style="color: #1a79bd"><strong>ID:</strong></label><br>
+        <p  *ngIf="!form1[('id')]?.touched">Nhập vào đây</p>
+        <input type="text" required max="5" formControlName="id"><br>
+        <p *ngIf="!form1[('id')]?.valid">Id không được để trống</p>
+
+        <label style="color: #1a79bd"><strong>Name:</strong></label><br>
+        <p  *ngIf="!form1[('name')]?.touched">Nhập vào đây</p>
         <input type="text" formControlName="name"><br>
-        <label>Price</label><br>
+        <p *ngIf="!form1[('name')]?.valid">Tên không được để trống</p>
+
+        <label style="color: #1a79bd"><strong>Price:</strong></label><br>
+        <p  *ngIf="!form1[('price')]?.touched">Nhập vào đây</p>
         <input type="text" formControlName="price"><br>
-        <button class="btn btn-warning" type="submit">Add Product</button>
+        <p *ngIf="!form1[('price')]?.valid">Giá không được để trống</p>
+        <br>
+        <button class="btn btn-warning" type="submit" [disabled]="!form.valid">Add Product</button>
       </form>
     </div>
   </div>
