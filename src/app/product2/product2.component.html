@@ -2,6 +2,7 @@
 <div class="row">
   <div class="col-5">
     <div>
+      <br>
       <h2 *ngFor="let product of listProduct">
         <h3>
           <strong>{{product.id}},</strong>
@@ -20,7 +21,7 @@
         <input type="text" formControlName="name"><br>
         <label>Price</label><br>
         <input type="text" formControlName="price"><br>
-        <button class="btn btn-warning" type="submit">Submit Application</button>
+        <button class="btn btn-warning" type="submit">Add Product</button>
       </form>
     </div>
   </div>

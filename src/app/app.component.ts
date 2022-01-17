@@ -14,8 +14,4 @@ export class AppComponent {
 
   ngOnInit() {
   }
-
-  voteCount(value: number) {
-    this.vote = value;
-  }
 }

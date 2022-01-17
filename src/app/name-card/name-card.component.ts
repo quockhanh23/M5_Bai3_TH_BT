@@ -20,12 +20,4 @@ export class NameCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  voted() {
-    this.counter++;
-    this.voteSize.emit(this.counter);
-  }
-
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
-  }
 }

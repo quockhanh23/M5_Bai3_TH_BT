@@ -1,0 +1,11 @@
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: aliceblue;
+}
+
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUS90FHGoQnj2mucjqQwvbfJ8U-Cb4IBZpRQ&usqp=CAU");
+  background-size: 100% 100%;
+  height: 100%;
+}

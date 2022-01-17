@@ -19,6 +19,8 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { Product2Component } from './product2/product2.component';
+import { RattingbarComponent } from './rattingbar/rattingbar.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { Product2Component } from './product2/product2.component';
     NameCardComponent,
     ProgressBarComponent,
     EmployeeComponent,
-    Product2Component
+    Product2Component,
+    RattingbarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -72,4 +76,8 @@ export interface Team3 {
   cia: string,
   policezei: string,
   swat: string,
+}
+export interface IRatingUnit {
+  value: number;
+  active: boolean;
 }

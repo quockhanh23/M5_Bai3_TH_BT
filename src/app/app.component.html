@@ -1,5 +1,6 @@
-<div class="container">
+<div class="container" id="alo">
   <div class="row">
+
     <div class="col-1">
       <a class="navbar-brand" routerLink="/em">Employee</a>
     </div>
@@ -33,9 +34,9 @@
     <div class="col-7">
       <router-outlet></router-outlet>
     </div>
-    <hr>
+    <hr style="margin-top: 15px">
     <div class="row">
-      <app-name-card (voteSize)="voteCount($any($event))" cardName="Professional Dev" email="prodev@codegym.vn"
+      <app-name-card cardName="Professional Dev" email="prodev@codegym.vn"
                      phone="0123456789" [age]="1"></app-name-card>
     </div>
     <hr>
@@ -43,6 +44,6 @@
 </div>
 <div class="row">
   <app-product2></app-product2>
+  <app-rattingbar></app-rattingbar>
 </div>
-
 
