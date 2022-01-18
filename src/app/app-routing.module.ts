@@ -11,11 +11,15 @@ import {TimelinesComponent} from "./timelines/timelines.component";
 import {NameCardComponent} from "./name-card/name-card.component";
 import {ProgressBarComponent} from "./progress-bar/progress-bar.component";
 import {EmployeeComponent} from "./employee/employee.component";
+import {RegisterComponent} from "./register/register.component";
+import {TodoComponent} from "./todo/todo.component";
+import {YoutubePlaylistComponent} from "./youtube-playlist/youtube-playlist.component";
+import {YoutubePlayerComponent} from "./youtube-player/youtube-player.component";
 
 const routes: Routes = [
-
-  {path: '',pathMatch: 'full', redirectTo: 'calu' },
-  // {path: '', component: CaluComponent},
+//full, prefix
+//   {path: '',pathMatch: 'full', redirectTo: 'calu' },
+//   {path: '', component: CaluComponent},
   {path: 'color2', component: Color2Component},
   {path: 'color', component: ColorComponent},
   {path: 'calu', component: CaluComponent},
@@ -25,8 +29,16 @@ const routes: Routes = [
   {path: 'nc', component: NameCardComponent},
   {path: 'pr', component: ProgressBarComponent},
   {path: 'em', component: EmployeeComponent},
-  {path: '**', component: NotfoundComponent},
-
+  {path: 'register', component: RegisterComponent},
+  {path: 'todo', component: TodoComponent},
+  // {path: '**', component: NotfoundComponent},
+  {
+    path: 'youtube',
+    component: YoutubePlaylistComponent,
+    children: [{
+      path: ':id',
+      component: YoutubePlayerComponent
+  }]}
 ];
 
 @NgModule({

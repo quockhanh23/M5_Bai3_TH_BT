@@ -22,6 +22,9 @@ import { Product2Component } from './product2/product2.component';
 import { RattingbarComponent } from './rattingbar/rattingbar.component';
 import { TodoComponent } from './todo/todo.component';
 import { RegisterComponent } from './register/register.component';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
+import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import { RegisterComponent } from './register/register.component';
     RattingbarComponent,
     TodoComponent,
     RegisterComponent,
+    PlaylistComponent,
+    YoutubePlaylistComponent,
+    YoutubePlayerComponent,
 
 
   ],
