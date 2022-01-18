@@ -1,1 +1,21 @@
 <p>register works!</p>
+<div>
+  <form [formGroup]="register" (ngSubmit)="add()" novalidate>
+    <label style="color: #1a79bd"><strong>Email:</strong></label><br>
+    <input type="text" formControlName="email"><br>
+    <label style="color: #1a79bd"><strong>Password:</strong></label><br>
+    <input type="password" formControlName="password"><br>
+    <label style="color: #1a79bd"><strong>Confirm Password:</strong></label><br>
+    <input type="password" formControlName="confirmPassword"><br>
+    <label style="color: #1a79bd"><strong>Country:</strong></label><br>
+    <input type="text" formControlName="country"><br>
+    <label style="color: #1a79bd"><strong>Age:</strong></label><br>
+    <input type="text" formControlName="age"><br>
+    <label style="color: #1a79bd"><strong>Gender:</strong></label><br>
+    <input type="text" formControlName="gender"><br>
+    <label style="color: #1a79bd"><strong>Phone:</strong></label><br>
+    <input type="text" formControlName="phone"><br>
+    <br>
+    <button class="btn btn-warning">Register</button>
+  </form>
+</div>
