@@ -1,5 +1,5 @@
 <p>register works!</p>
-<div class="row">
+<div class="row" align="center">
   <div class="col-6">
     <div>
       <h2>Register</h2>
@@ -60,13 +60,13 @@
          && register.controls['age'].touched">
           Age is greater than 16!
         </div>
-        <label class="col">
-          Gender: <br>
+        <label style="color: #1a79bd"><strong>Gender:</strong></label>
+        <br>
           <input type="radio" id="male" formControlName="gender" value="Male">
           <label for="male">male</label><br>
           <input type="radio" id="female" formControlName="gender" value="Female">
           <label for="male">female</label><br>
-        </label>
+
         <div class="col alert alert-danger" role="alert"
              *ngIf="register.controls['gender'].errors?.['required']
          && register.controls['gender'].touched">
@@ -87,7 +87,7 @@
           Invalid Phone Number
         </div>
         <br>
-        <button class="btn btn-warning">Register</button>
+        <button class="btn btn-warning" [disabled]="!register.valid">Register</button>
       </form>
     </div>
   </div>
