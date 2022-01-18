@@ -1,21 +1,94 @@
 <p>register works!</p>
-<div>
-  <form [formGroup]="register" (ngSubmit)="add()" novalidate>
-    <label style="color: #1a79bd"><strong>Email:</strong></label><br>
-    <input type="text" formControlName="email"><br>
-    <label style="color: #1a79bd"><strong>Password:</strong></label><br>
-    <input type="password" formControlName="password"><br>
-    <label style="color: #1a79bd"><strong>Confirm Password:</strong></label><br>
-    <input type="password" formControlName="confirmPassword"><br>
-    <label style="color: #1a79bd"><strong>Country:</strong></label><br>
-    <input type="text" formControlName="country"><br>
-    <label style="color: #1a79bd"><strong>Age:</strong></label><br>
-    <input type="text" formControlName="age"><br>
-    <label style="color: #1a79bd"><strong>Gender:</strong></label><br>
-    <input type="text" formControlName="gender"><br>
-    <label style="color: #1a79bd"><strong>Phone:</strong></label><br>
-    <input type="text" formControlName="phone"><br>
-    <br>
-    <button class="btn btn-warning">Register</button>
-  </form>
+<div class="row">
+  <div class="col-6">
+    <div>
+      <h2>Register</h2>
+      <form [formGroup]="register" (ngSubmit)="add()" >
+        <label style="color: #1a79bd"><strong>Email:</strong></label><br>
+        <input type="text" formControlName="email"><br>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['email'].errors?.['required']
+         && register.controls['email'].touched">
+          Email is required!
+        </div>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['email'].errors?.['email']
+         && register.controls['email'].touched">
+          Not a valid email
+        </div>
+        <label style="color: #1a79bd"><strong>Password:</strong></label><br>
+        <input type="password" formControlName="password"><br>
+
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['password'].errors?.['required']
+         && register.controls['password'].touched">
+          Password is required!
+        </div>
+        <label style="color: #1a79bd"><strong>Confirm Password:</strong></label><br>
+        <input type="password" formControlName="confirmPassword"><br>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['confirmPassword'].errors?.['required']
+         && register.controls['confirmPassword'].touched">
+          Confirm Password is required!
+        </div>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['confirmPassword'].value != register.controls['password'].value
+         && register.controls['confirmPassword'].touched">
+          Confirm Password doesnt match
+        </div>
+        <label style="color: #1a79bd"><strong>Country:</strong></label><br>
+        <select formControlName="country">
+          <option class="form-control" [value]="'Việt Nam'" selected="selected">Việt Nam</option>
+          <option class="form-control" [value]="'USA'">USA</option>
+          <option class="form-control" [value]="'Germany'">Germany</option>
+        </select>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['country'].errors?.['required']
+         && register.controls['country'].touched">
+          Country is required!
+        </div>
+        <br>
+        <label style="color: #1a79bd"><strong>Age:</strong></label><br>
+        <input type="text" formControlName="age"><br>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['age'].errors?.['required']
+         && register.controls['age'].touched">
+          Age is required!
+        </div>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['age'].errors?.['min']
+         && register.controls['age'].touched">
+          Age is greater than 16!
+        </div>
+        <label class="col">
+          Gender: <br>
+          <input type="radio" id="male" formControlName="gender" value="Male">
+          <label for="male">male</label><br>
+          <input type="radio" id="female" formControlName="gender" value="Female">
+          <label for="male">female</label><br>
+        </label>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['gender'].errors?.['required']
+         && register.controls['gender'].touched">
+          Gender is required!
+        </div>
+        <br>
+        <label style="color: #1a79bd"><strong>Phone:</strong></label><br>
+        <input type="text" formControlName="phone"><br>
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['phone'].errors?.['required']
+         && register.controls['phone'].touched">
+          Phone is required!
+        </div>
+
+        <div class="col alert alert-danger" role="alert"
+             *ngIf="register.controls['phone'].errors?.['pattern']
+         && register.controls['phone'].touched">
+          Invalid Phone Number
+        </div>
+        <br>
+        <button class="btn btn-warning">Register</button>
+      </form>
+    </div>
+  </div>
 </div>

@@ -13,7 +13,9 @@ import {ProgressBarComponent} from "./progress-bar/progress-bar.component";
 import {EmployeeComponent} from "./employee/employee.component";
 
 const routes: Routes = [
-  {path: '', component: CaluComponent},
+
+  {path: '',pathMatch: 'full', redirectTo: 'calu' },
+  // {path: '', component: CaluComponent},
   {path: 'color2', component: Color2Component},
   {path: 'color', component: ColorComponent},
   {path: 'calu', component: CaluComponent},

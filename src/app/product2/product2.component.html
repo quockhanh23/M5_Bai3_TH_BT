@@ -31,7 +31,7 @@
         <input type="text" formControlName="price"><br>
         <p *ngIf="!form1[('price')]?.valid">Giá không được để trống</p>
         <br>
-        <button (click)="validNumber()" class="btn btn-warning" type="submit" [disabled]="!form.valid">Add Product</button>
+        <button (click)="validNumber()" class="btn btn-warning" type="submit">Add Product</button>
       </form>
     </div>
   </div>

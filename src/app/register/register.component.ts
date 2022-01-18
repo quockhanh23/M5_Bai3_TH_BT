@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Register} from "../app.module";
 
 @Component({
@@ -21,13 +21,13 @@ export class RegisterComponent implements OnInit {
     }
   ]
   register = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
-    confirmPassword: new FormControl(''),
-    country: new FormControl(''),
-    age: new FormControl(''),
-    gender: new FormControl(''),
-    phone: new FormControl(''),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    password: new FormControl('',Validators.required),
+    confirmPassword: new FormControl('',Validators.required),
+    country: new FormControl('',Validators.required),
+    age: new FormControl('',[Validators.required,Validators.min(16)]),
+    gender: new FormControl('',Validators.required),
+    phone: new FormControl('',[Validators.required,Validators.pattern('(84|0[3|5|7|8|9])+([0-9]{8})\\b')]),
   });
 
   constructor() {
@@ -37,6 +37,7 @@ export class RegisterComponent implements OnInit {
   }
 
   add(): any {
+    alert("Đăng kí thành công")
     console.log(this.register.value)
     this.listUser.push(this.register.value)
   }
