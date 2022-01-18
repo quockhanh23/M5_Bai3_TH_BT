@@ -8,7 +8,18 @@ import {Register} from "../app.module";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-user!: Register[]
+
+  listUser: Register[] = [
+    {
+      email: '',
+      password: '',
+      confirmPassword: '',
+      country: '',
+      age: '',
+      gender: '',
+      phone: ''
+    }
+  ]
   register = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
@@ -17,7 +28,6 @@ user!: Register[]
     age: new FormControl(''),
     gender: new FormControl(''),
     phone: new FormControl(''),
-
   });
 
   constructor() {
@@ -28,5 +38,6 @@ user!: Register[]
 
   add(): any {
     console.log(this.register.value)
+    this.listUser.push(this.register.value)
   }
 }
