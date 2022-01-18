@@ -20,6 +20,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { Product2Component } from './product2/product2.component';
 import { RattingbarComponent } from './rattingbar/rattingbar.component';
+import { TodoComponent } from './todo/todo.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { RattingbarComponent } from './rattingbar/rattingbar.component';
     EmployeeComponent,
     Product2Component,
     RattingbarComponent,
+    TodoComponent,
+    RegisterComponent,
 
 
   ],
@@ -81,4 +85,9 @@ export interface Team3 {
 export interface IRatingUnit {
   value: number;
   active: boolean;
+}
+export interface Todo {
+  id?: number;
+  content?: string;
+  complete?: boolean;
 }

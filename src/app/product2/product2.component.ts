@@ -52,6 +52,13 @@ export class Product2Component implements OnInit {
     }
   }
 
+  validNumber(): any {
+    // @ts-ignore
+    if (isNaN(this.form.get('id'))) {
+      return "Nhập số bạn ơi"
+    }
+  }
+
   delete(): any {
     let index = this.findByIndex()
     this.listProduct.splice(index)
@@ -64,4 +71,5 @@ export class Product2Component implements OnInit {
   get form2(): { [key: string]: AbstractControl; } {
     return this.form.controls;
   }
+
 }
