@@ -25,6 +25,9 @@ import { RegisterComponent } from './register/register.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+
 
 
 @NgModule({
@@ -50,6 +53,9 @@ import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen
     PlaylistComponent,
     YoutubePlaylistComponent,
     YoutubePlayerComponent,
+    ProductListComponent,
+    ProductCreateComponent,
+
 
 
   ],
